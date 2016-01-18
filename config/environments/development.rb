@@ -4,6 +4,17 @@ Tachyon::Application.configure do
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings ={
+    address:   ENV["gmail_address"],
+    port:    ENV["gmail_port"],
+    domain: ENV["gmail_domain"],
+    user_name: ENV["gmail_user_name"],
+    password: ENV["gmail_password"],
+    authentication: 'plain',
+    enable_starttls_auto: true }
+
+
   config.cache_classes = false
 
   # Do not eager load code on boot.

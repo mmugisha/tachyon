@@ -1,6 +1,8 @@
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
+      <br/>
+      <br/>
       <div class="container">
         <div class="row">
           <div class="col-md-5">
@@ -8,7 +10,11 @@
               <p> 
                 Let us partner with you to redefine your customer's online banking experience.
                 </p>
-              <p><a class="btn btn-success btn-lg" href="#" role="button">Request a Demo &raquo;</a></p>
+              <p>
+                <%= link_to contact_path, :class=> 'btn btn-lg btn-success' do %>Request a Demo &raquo;
+                
+                <% end %> 
+              </p>
              </div>  
             </div>
         </div>

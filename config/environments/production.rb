@@ -1,5 +1,14 @@
 Tachyon::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings ={
+    address:   ENV["gmail_address"],
+    port:    ENV["gmail_port"],
+    domain: ENV["gmail_domain"],
+    user_name: ENV["gmail_user_name"],
+    password: ENV["gmail_password"],
+    authentication: 'plain',
+    enable_starttls_auto: true }
 
   # Code is not reloaded between requests.
   config.cache_classes = true

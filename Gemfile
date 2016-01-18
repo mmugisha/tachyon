@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'simple_form'
+
+gem 'figaro'
+
 gem 'bootstrap-sass', '~> 3.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
